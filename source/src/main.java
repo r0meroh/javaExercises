@@ -25,7 +25,7 @@ public class main {
 
     private static int  WhatIsBigger (int x, int y)
     {
-
+        int temp = 0;
         if (x > y)
         {
             //System.out.println(x);
@@ -36,7 +36,7 @@ public class main {
             return y;
         }
 
-        return x;
+        return temp;
     }
 }
 
