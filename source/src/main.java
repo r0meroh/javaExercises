@@ -3,40 +3,21 @@
 
 
 public class main {
-    public static void main(String[] args){
-  /**      System.out.println("hello");
-        String hi = "hi";
-        System.out.println(hi);
-   **/
-      int firstInt =10, secondInt = 9;
-      int thirdInt = 1, fourthInt = 111;
+    public static void main(String[] args) {
+        //create sort object
+        selectionSort sortThis = new selectionSort();
+        //initialize array to sort
+        int myArray[] = {554,234,77,0,65,234523};
+
+        //test sort
+        System.out.println(sortThis.selectionSort(myArray));
+        //reassign sorted array to original array
+        myArray = sortThis.selectionSort(myArray);
+        //print newly sorted array
+        sortThis.printSort(myArray);
 
 
-
-
-
-      System.out.println(WhatIsBigger(firstInt,secondInt));
-      System.out.println(WhatIsBigger(thirdInt,fourthInt));
-
-
-
-
-    }
-
-    private static int  WhatIsBigger (int x, int y)
-    {
-        int temp = 0;
-        if (x > y)
-        {
-            //System.out.println(x);
-            return x;
-        }else if(y>x)
-        {
-            //System.out.println(y);
-            return y;
-        }
-
-        return temp;
+        //room for next sort
     }
 }
 
