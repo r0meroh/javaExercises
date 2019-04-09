@@ -16,6 +16,7 @@ public class bubbleSort {
     void printBubbles(int[] x){
         for(int num:x)
             System.out.print(num + " ");
+
     }
 
 }
