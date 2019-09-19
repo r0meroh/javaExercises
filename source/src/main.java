@@ -40,6 +40,15 @@ public class main {
         System.out.println("Bubble Sort ");
         mySecondArray = bubbles.bubbly(mySecondArray);
         bubbles.printBubbles(mySecondArray);
+
+        System.out.println("\nInsertion sort: ");
+        insertionSort inserts = new insertionSort();
+        System.out.println("Original array");
+        int myThirdArray[] = {22,99,76,45,66,34,2};
+        inserts.printInsert(myThirdArray);
+        System.out.println("sorting with insertion sort");
+        myThirdArray = inserts.insertSort(myThirdArray);
+        inserts.printInsert(myThirdArray);
     }
 }
 
