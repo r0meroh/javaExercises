@@ -49,6 +49,15 @@ public class main {
         System.out.println("sorting with insertion sort");
         myThirdArray = inserts.insertSort(myThirdArray);
         inserts.printInsert(myThirdArray);
+
+        System.out.println("\nMerge sort: ");
+        mergeSort merging = new mergeSort();
+        System.out.println("Original array: ");
+        int [] myFourthArray = {55,77,8,6,2,44,1};
+        merging.printMerge(myFourthArray);
+        System.out.println("\nSorting: ");
+        myFourthArray = merging.mergeSort(myFourthArray, myFourthArray.length);
+        merging.printMerge(myFourthArray);
     }
 }
 
