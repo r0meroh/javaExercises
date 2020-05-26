@@ -9,20 +9,20 @@ public class queue  {
 
 
 
-
-   public void enqueue(E elem){
-       Node<E> node = new Node<E>();
-       node.setElement(elem);
-       node.setNext(null);
-
-       if(size == 0){
-           head = node;
-       }else{
-           tail.setNext(node);
-           tail = node;
-           size ++;
-       }
-   }
+//
+//   public void enqueue(E elem){
+//       Node<E> node = new Node<E>();
+//       node.setElement(elem);
+//       node.setNext(null);
+//
+//       if(size == 0){
+//           head = node;
+//       }else{
+//           tail.setNext(node);
+//           tail = node;
+//           size ++;
+//       }
+//   }
 
    public int size(){
        return size;

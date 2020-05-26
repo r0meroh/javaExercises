@@ -1,6 +1,8 @@
+package sorts;
+
 public class insertionSort {
 
-    int [] insertSort (int[] x) {
+    public int [] insertSort (int[] x) {
 
         for(int i = 1; i < x.length; i++) {
 
@@ -21,7 +23,7 @@ public class insertionSort {
 
     }
 
-    void printInsert(int[] x) {
+    public void printInsert(int[] x) {
         for(int nums:x)
             System.out.print(nums + " ");
     }

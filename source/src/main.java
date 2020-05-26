@@ -1,6 +1,11 @@
 //this program is my attempt to exercise my java muscle
 //this specific program will eventually have sorting algorithms
 
+import sorts.*;
+import calculator.*;
+
+
+import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
@@ -58,6 +63,27 @@ public class main {
         System.out.println("\nSorting: ");
         myFourthArray = merging.mergeSort(myFourthArray, myFourthArray.length);
         merging.printMerge(myFourthArray);
+        System.out.println("\n");
+
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("what two numbers would you like to use?");
+        System.out.println("enter the first number: ");
+        int first =  scan.nextInt();
+
+        System.out.println("what will be the second number?");
+        int second = scan.nextInt();
+        calc mycalc = new calc(first,second);
+
+        System.out.println("what operation would you like to execute?");
+        System.out.println("you can add\nsubtract\ndivide\nor multiply");
+        System.out.println("enter the operation name: ");
+        String operation = scan.next();
+
+        mycalc.decision(operation);
+
+
+
     }
 }
 

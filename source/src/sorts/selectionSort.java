@@ -1,8 +1,8 @@
-
+package sorts;
 //this class is a selection sort
 public class selectionSort {
 
-    int[] selectionSort(int[] x)
+    public int[] selectionSort(int[] x)
     {
         //move down the array
         for(int i =0; i < x.length-1; i++)
@@ -26,7 +26,7 @@ public class selectionSort {
         return x;
     }
 
-    void printSort (int[] x)
+    public void printSort (int[] x)
     {
         //use for each to print newly sorted array
         for(int num:x) {

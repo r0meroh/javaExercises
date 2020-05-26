@@ -1,6 +1,8 @@
+package sorts;
+
 public class bubbleSort {
 
-    int[] bubbly (int[] x){
+    public int[] bubbly (int[] x){
 
         for(int i = 0; i < x.length - 1; i++){
             for(int j = 0; j < x.length - i - 1; j++){
@@ -13,7 +15,7 @@ public class bubbleSort {
         }
         return x;
     }
-    void printBubbles(int[] x){
+    public void printBubbles(int[] x){
         for(int num:x)
             System.out.print(num + " ");
 
