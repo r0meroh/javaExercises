@@ -43,6 +43,7 @@ public class BoxedItem implements Sellable, Transportable {
     public void printDimensions(int[] dims){
         for(int x = 0; x < dims.length; x++){
             System.out.print(dims[x] + " ");
+
         }
     }
 }
