@@ -23,5 +23,15 @@ public class generic_main {
         }
 
         System.out.println(num);
+
+        Student john = new Student("11","John", 30);
+        System.out.println(john.toString());
+
+        Student mike = new Student("28", "Mike", 29);
+        System.out.println(mike.toString());
+
+        System.out.println(mike.equalTo(john));
+
+
     }
 }
