@@ -1,4 +1,4 @@
-//this program is my attempt to exercise my java muscle
+package sorts;//this program is my attempt to exercise my java muscle
 //this specific program will eventually have sorting algorithms
 
 import sorts.*;

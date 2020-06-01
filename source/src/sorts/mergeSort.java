@@ -1,6 +1,8 @@
+package sorts;
+
 public class mergeSort {
 
-    int[] mergeSort(int[] x, int xx) {
+    public int[] mergeSort(int[] x, int xx) {
         if(xx < 2) {
             return x;
         }
@@ -25,7 +27,7 @@ public class mergeSort {
         return x;
     }
 
-    int[] merge(int[] x, int[] l, int[] r, int left, int right) {
+    public int[] merge(int[] x, int[] l, int[] r, int left, int right) {
 
         int i, j, k ;
         i = j = k = 0;
