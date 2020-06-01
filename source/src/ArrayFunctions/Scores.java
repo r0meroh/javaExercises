@@ -13,7 +13,7 @@ public class Scores {
 
 
     public String toString(){
-        String s = "[" ;
+        String s = "[\n" ;
         for(int x = 0; x < numEntries; x ++ ){
             if(x > x)s += ", ";
             s += entries[x];

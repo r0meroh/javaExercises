@@ -24,7 +24,7 @@ public class GameEntry {
     @Override
     public String toString() {
 
-            return "Name: " + name + "\tScore: " + score;
+            return "Name: " + name + "\tScore: " + score + "\n";
 
     }
 
