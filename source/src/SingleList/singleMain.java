@@ -32,12 +32,47 @@ public class singleMain {
         System.out.println(first.getData() + " points to " + first.getNext().getData());
         System.out.println("the previous pointer of this node is: " + myList.Head.getPrevious());
 
+
+
+        System.out.println("printing head");
+        System.out.println(myList.Head.getData());
+
+        System.out.println("using stack to reverse list");
+        Stack mystack = new Stack();
+
+        for(int x = 1; x <= myList.size; x ++){
+            System.out.println(myList.Head.getData());
+            mystack.push(myList.Head);
+
+
+            if(myList.Head.getNext() != null)
+                myList.Head = myList.Head.getNext();
+
+        }
+        System.out.println("printing stack");
+        myList.Head = mystack.top;
+        myList.current = myList.Head;
+        for(int y = 1; y <= mystack.sizeOf(); y ++){
+            myList.current.setNext(mystack.top);
+            System.out.println(mystack.top.getData());
+            myList.current = mystack.pop();
+        }
+
+
+
+
         System.out.println("printing nodes");
         myList.printList();
 
-        System.out.println("reversing list");
-        myList.reverseList();
-        myList.printList();
+
+//
+//        System.out.println("reversing list");
+//        myList.reverseList();
+//        myList.printList();
+
+
+
+
 
 
     }
