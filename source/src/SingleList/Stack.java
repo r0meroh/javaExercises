@@ -22,16 +22,35 @@ public class Stack implements NodeStack {
     }
 
     public void push(Node element){
-        top = element;
+        if(size > 0) {
+            Node previousNode = top;
+            top = element;
+            top.setNext(previousNode);
+        }else{
+            top = element;
+        }
+
+//        if(size > 0){
+//            element.setNext(top);
+//        }
+//        top = element;
+
         size ++;
     }
 
+//    public void getTop(){
+//        if(size < 0 ){
+//            top
+//        }
+//    }
+
     public Node pop(){
-        if(isEmpty() == true)
-            throw new EmptyStackException();
-         Node temp = top.getNext();
-         top = top.getNext();
-        size --;
+
+        Node temp = top;
+        top = temp.getNext();
+        if(size > 0)
+            size --;
+
         return temp;
     }
 }

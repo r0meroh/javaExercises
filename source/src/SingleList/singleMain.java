@@ -14,9 +14,11 @@ public class singleMain {
 
         Node second = new Node("mike", null);
         Node third = new Node("ethan" , null);
-
+        Node fourth = new Node("eric", null);
         myList.add(second);
         myList.add(third);
+        myList.add(fourth);
+
 
 
         System.out.println("The second node is: ");
@@ -31,38 +33,62 @@ public class singleMain {
         System.out.println(myList.Head.getData());
         System.out.println(first.getData() + " points to " + first.getNext().getData());
         System.out.println("the previous pointer of this node is: " + myList.Head.getPrevious());
+        System.out.println("last node in list is: " + myList.current.getData());
+        System.out.println("it points to: " + myList.current.getNext());
 
 
 
         System.out.println("printing head");
         System.out.println(myList.Head.getData());
+        System.out.println("mike points to: " + second.getNext().getData());
+        System.out.println("ethan points to: " + third.getNext().getData());
 
         System.out.println("using stack to reverse list");
+
         Stack mystack = new Stack();
+        mystack.push(myList.Head);
+        System.out.println("top of stack before loop: " + mystack.top.getData());
+        myList.current = myList.Head.getNext();
+        System.out.println(myList.current.getData());
+        int x = 2;
+        while(x <= myList.size){
 
-        for(int x = 1; x <= myList.size; x ++){
-            System.out.println(myList.Head.getData());
-            mystack.push(myList.Head);
+            mystack.push(myList.current);
 
+            System.out.println("the top of the stack is : " + mystack.top.getData());
 
-            if(myList.Head.getNext() != null)
-                myList.Head = myList.Head.getNext();
+            myList.current = myList.current.getNext();
+            System.out.println(x);
+            System.out.println("current of the list is now: " + myList.current.getData());
+            x++;
+
 
         }
         System.out.println("printing stack");
         myList.Head = mystack.top;
-        myList.current = myList.Head;
+        System.out.println("current top is: " + mystack.top.getData());
+
         for(int y = 1; y <= mystack.sizeOf(); y ++){
-            myList.current.setNext(mystack.top);
-            System.out.println(mystack.top.getData());
-            myList.current = mystack.pop();
+            System.out.println("current size of stack is: " + mystack.sizeOf());
+            if(mystack.size > 0) {
+                System.out.println("current top of stack: ");
+                System.out.println(mystack.top.getData());
+                myList.current = mystack.pop();
+                System.out.println("current node in list is: " + myList.current.getData());
+                myList.current.setNext(mystack.top);
+                System.out.println("new top is now ");
+                System.out.println(mystack.top.getData());
+            }
+
+
+
         }
 
 
 
 
-        System.out.println("printing nodes");
-        myList.printList();
+       // System.out.println("printing nodes");
+        // myList.printList();
 
 
 //

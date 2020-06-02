@@ -5,6 +5,7 @@ public class Slist {
     protected Node Head; // "head" node
     protected Node current;
     protected Node prev;
+    protected Node tempo;
     protected long size; // possible amount of nodes in the list
 
     // constructor for empty list
@@ -27,9 +28,9 @@ public class Slist {
         }else{
             size ++;
 
-
+            tempo = current;
             current.setNext(n);
-            n.setPrevious(current);
+            n.setPrevious(tempo);
             current = n;
 
 

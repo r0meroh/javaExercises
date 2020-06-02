@@ -10,6 +10,8 @@ public interface NodeStack {
 
     public void push(Node element);
 
-    public Node pop()
-        throws EmptyStackException;
+//    public void getTop();
+
+    public Node pop();
+
 }
